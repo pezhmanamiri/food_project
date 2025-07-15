@@ -6,8 +6,13 @@
   <component name="ChangeListManager">
     <list default="true" id="96ab71ce-070a-4bfa-913b-1b0d71713514" name="Changes" comment="">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/accounts/urls.py" beforeDir="false" afterPath="$PROJECT_DIR$/accounts/urls.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/meals/views.py" beforeDir="false" afterPath="$PROJECT_DIR$/meals/views.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/accounts/templates/accounts/login.html" beforeDir="false" afterPath="$PROJECT_DIR$/accounts/templates/accounts/login.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/db.sqlite3" beforeDir="false" afterPath="$PROJECT_DIR$/db.sqlite3" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/food_project/settings.py" beforeDir="false" afterPath="$PROJECT_DIR$/food_project/settings.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/meals/templates/meals/admin_report.html" beforeDir="false" afterPath="$PROJECT_DIR$/meals/templates/meals/admin_report.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/meals/templates/meals/edit_meal.html" beforeDir="false" afterPath="$PROJECT_DIR$/meals/templates/meals/edit_meal.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/meals/templates/meals/select_meals.html" beforeDir="false" afterPath="$PROJECT_DIR$/meals/templates/meals/select_meals.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/meals/templates/meals/summary.html" beforeDir="false" afterPath="$PROJECT_DIR$/meals/templates/meals/summary.html" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -52,6 +57,7 @@
   <component name="PropertiesComponent"><![CDATA[{
   "keyToString": {
     "DefaultHtmlFileTemplate": "HTML File",
+    "Django Server.djangoProject.executor": "Run",
     "RunOnceActivity.OpenDjangoStructureViewOnStart": "true",
     "RunOnceActivity.ShowReadmeOnStart": "true",
     "git-widget-placeholder": "main",
@@ -109,7 +115,7 @@
       <updated>1752499654762</updated>
       <workItem from="1752499656876" duration="3399000" />
       <workItem from="1752503557169" duration="6336000" />
-      <workItem from="1752560153712" duration="2605000" />
+      <workItem from="1752560153712" duration="13748000" />
     </task>
     <servers />
   </component>
