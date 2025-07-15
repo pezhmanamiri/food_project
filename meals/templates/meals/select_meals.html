@@ -1,10 +1,56 @@
+{% load persian_filters %}
 <!DOCTYPE html>
-<html lang="en">
+<html lang="fa">
 <head>
-  <meta charset="UTF-8">
-  <title>$Title$</title>
+    <meta charset="UTF-8">
+    <title>انتخاب غذا</title>
+    <style>
+        body { font-family: sans-serif; direction: rtl; padding: 30px; background: #f9f9f9 }
+        .day-box { border: 1px solid #ccc; margin-bottom: 15px; padding: 15px; background: #fff; border-radius: 10px; }
+        h2 { color: #2d3436 }
+        select { width: 100%; padding: 6px; margin-top: 5px; }
+        button { padding: 10px 20px; margin-top: 20px; background: green; color: white; border: none; border-radius: 5px; }
+    </style>
 </head>
 <body>
-$END$
+<h1>سلام {{ employee.full_name }} 👋</h1>
+<form method="post">
+    {% csrf_token %}
+    {% for day in days %}
+    <div class="day-box">
+        <h2>{{ day|persian_weekday }} - {{ day|to_jalali }}</h2>
+
+     {% with meal_options_day=meal_options|dict_get:day %}
+    <label>صبحانه:</label>
+    <select name="breakfast_{{ day|date:'Y-m-d' }}">
+        <option value="">---</option>
+        {% for item in meal_options_day.breakfast %}
+            <option value="{{ item.name }}">{{ item.name }}</option>
+        {% endfor %}
+    </select>
+
+    <label>ناهار:</label>
+    <select name="lunch_{{ day|date:'Y-m-d' }}">
+        <option value="">---</option>
+        {% for item in meal_options_day.lunch %}
+            <option value="{{ item.name }}">{{ item.name }}</option>
+        {% endfor %}
+    </select>
+
+    <label>شام:</label>
+    <select name="dinner_{{ day|date:'Y-m-d' }}">
+        <option value="">---</option>
+        {% for item in meal_options_day.dinner %}
+            <option value="{{ item.name }}">{{ item.name }}</option>
+        {% endfor %}
+    </select>
+{% endwith %}
+
+
+    </div>
+    {% endfor %}
+
+    <button type="submit">ثبت نهایی</button>
+</form>
 </body>
 </html>

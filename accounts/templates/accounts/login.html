@@ -1,10 +1,27 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="fa">
 <head>
-  <meta charset="UTF-8">
-  <title>$Title$</title>
+    <meta charset="UTF-8">
+    <title>ورود</title>
+    <style>
+        body { font-family: sans-serif; background: #f3f3f3; display: flex; justify-content: center; align-items: center; height: 100vh; }
+        .login-box { background: white; padding: 30px; border-radius: 10px; box-shadow: 0 0 15px rgba(0,0,0,0.1); }
+        input { width: 100%; padding: 10px; margin-top: 10px; }
+        button { width: 100%; padding: 10px; margin-top: 15px; background: green; color: white; border: none; border-radius: 5px; }
+    </style>
 </head>
 <body>
-$END$
+<div class="login-box">
+    <h2>ورود کارمندان</h2>
+    <form method="post">
+        {% csrf_token %}
+        {{ form.personnel_code.label_tag }} {{ form.personnel_code }}
+        {{ form.password.label_tag }} {{ form.password }}
+        <button type="submit">ورود</button>
+    </form>
+    {% if error_message %}
+    <p style="color: red">{{ error_message }}</p>
+    {% endif %}
+</div>
 </body>
 </html>

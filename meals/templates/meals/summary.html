@@ -1,10 +1,41 @@
+{% load persian_filters %}
 <!DOCTYPE html>
-<html lang="en">
+<html lang="fa">
 <head>
-  <meta charset="UTF-8">
-  <title>$Title$</title>
+    <meta charset="UTF-8">
+    <title>سفارش‌های من</title>
+    <style>
+        body { font-family: sans-serif; direction: rtl; background: #f4f4f4; padding: 30px; }
+        table { width: 100%; border-collapse: collapse; background: white; }
+        th, td { padding: 10px; border: 1px solid #ccc; text-align: center; }
+        th { background-color: #eee; }
+        a.edit-link { text-decoration: none; color: blue; }
+    </style>
 </head>
 <body>
-$END$
+    <h1>خلاصه سفارش غذا برای {{ employee.full_name }}</h1>
+
+    <table>
+        <thead>
+            <tr>
+                <th>تاریخ</th>
+                <th>صبحانه</th>
+                <th>ناهار</th>
+                <th>شام</th>
+                <th>ویرایش</th>
+            </tr>
+        </thead>
+        <tbody>
+            {% for item in selections %}
+            <tr>
+                <td>{{ item.date|persian_weekday }} - {{ item.date|to_jalali }}</td>
+                <td>{{ item.breakfast }}</td>
+                <td>{{ item.lunch }}</td>
+                <td>{{ item.dinner }}</td>
+                <td><a class="edit-link" href="{% url 'edit_meal' item.date %}">ویرایش</a></td>
+            </tr>
+            {% endfor %}
+        </tbody>
+    </table>
 </body>
 </html>

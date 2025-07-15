@@ -1,10 +1,47 @@
+{% load persian_filters %}
 <!DOCTYPE html>
-<html lang="en">
+<html lang="fa">
 <head>
-  <meta charset="UTF-8">
-  <title>$Title$</title>
+    <meta charset="UTF-8">
+    <title>ویرایش سفارش</title>
+    <style>
+        body { font-family: sans-serif; direction: rtl; background: #f8f8f8; padding: 30px; }
+        .form-box { background: white; padding: 20px; border-radius: 10px; box-shadow: 0 0 10px rgba(0,0,0,0.1); max-width: 500px; margin: auto; }
+        select { width: 100%; padding: 8px; margin-bottom: 15px; }
+        button { padding: 10px 20px; background: #2980b9; color: white; border: none; border-radius: 5px; }
+    </style>
 </head>
 <body>
-$END$
+<div class="form-box">
+    <h2>ویرایش سفارش - {{ date|persian_weekday }} {{ date|to_jalali }}</h2>
+    <form method="post">
+        {% csrf_token %}
+        <label>صبحانه:</label>
+        <select name="breakfast">
+            <option value="">---</option>
+            {% for item in meal_options.breakfast %}
+                <option value="{{ item.name }}" {% if item.name == selection.breakfast %}selected{% endif %}>{{ item.name }}</option>
+            {% endfor %}
+        </select>
+
+        <label>ناهار:</label>
+        <select name="lunch">
+            <option value="">---</option>
+            {% for item in meal_options.lunch %}
+                <option value="{{ item.name }}" {% if item.name == selection.lunch %}selected{% endif %}>{{ item.name }}</option>
+            {% endfor %}
+        </select>
+
+        <label>شام:</label>
+        <select name="dinner">
+            <option value="">---</option>
+            {% for item in meal_options.dinner %}
+                <option value="{{ item.name }}" {% if item.name == selection.dinner %}selected{% endif %}>{{ item.name }}</option>
+            {% endfor %}
+        </select>
+
+        <button type="submit">ثبت تغییرات</button>
+    </form>
+</div>
 </body>
 </html>

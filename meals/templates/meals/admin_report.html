@@ -1,0 +1,79 @@
+{% load persian_filters %}
+<!DOCTYPE html>
+<html lang="fa">
+<head>
+    <meta charset="UTF-8">
+    <title>گزارش غذاها - مدیر توزیع</title>
+    <style>
+        body { font-family: sans-serif; direction: rtl; background: #f4f4f4; padding: 30px; }
+        .day-box { background: white; margin-bottom: 30px; padding: 20px; border-radius: 10px; box-shadow: 0 0 10px rgba(0,0,0,0.1); page-break-after: always; }
+        h2 { margin-top: 0; color: #2c3e50; }
+        table { width: 100%; border-collapse: collapse; margin-top: 10px; }
+        th, td { padding: 8px; border: 1px solid #ccc; text-align: right; }
+        th { background-color: #ecf0f1; }
+        .print-btn { margin-bottom: 20px; padding: 10px 20px; background: #3498db; color: white; border: none; border-radius: 5px; cursor: pointer; }
+        @media print {
+            .print-btn { display: none; }
+        }
+    </style>
+</head>
+<body>
+    <button class="print-btn" onclick="window.print()">چاپ گزارش</button>
+
+    {% for day in days %}
+    {% with data=report_data|dict_get:day %}
+    <div class="day-box">
+        <h2>{{ day|persian_weekday }} - {{ day|to_jalali }}</h2>
+
+        <h3>صبحانه</h3>
+        {% if data.breakfast %}
+        <table>
+            <thead>
+                <tr><th>نام کارمند</th><th>غذا</th></tr>
+            </thead>
+            <tbody>
+                {% for item in data.breakfast %}
+                <tr><td>{{ item.0 }}</td><td>{{ item.1 }}</td></tr>
+                {% endfor %}
+            </tbody>
+        </table>
+        {% else %}
+        <p>سفارشی ثبت نشده</p>
+        {% endif %}
+
+        <h3>ناهار</h3>
+        {% if data.lunch %}
+        <table>
+            <thead>
+                <tr><th>نام کارمند</th><th>غذا</th></tr>
+            </thead>
+            <tbody>
+                {% for item in data.lunch %}
+                <tr><td>{{ item.0 }}</td><td>{{ item.1 }}</td></tr>
+                {% endfor %}
+            </tbody>
+        </table>
+        {% else %}
+        <p>سفارشی ثبت نشده</p>
+        {% endif %}
+
+        <h3>شام</h3>
+        {% if data.dinner %}
+        <table>
+            <thead>
+                <tr><th>نام کارمند</th><th>غذا</th></tr>
+            </thead>
+            <tbody>
+                {% for item in data.dinner %}
+                <tr><td>{{ item.0 }}</td><td>{{ item.1 }}</td></tr>
+                {% endfor %}
+            </tbody>
+        </table>
+        {% else %}
+        <p>سفارشی ثبت نشده</p>
+        {% endif %}
+    </div>
+    {% endwith %}
+    {% endfor %}
+</body>
+</html>
