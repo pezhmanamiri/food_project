@@ -5,23 +5,9 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="96ab71ce-070a-4bfa-913b-1b0d71713514" name="Changes" comment="">
-      <change beforePath="$PROJECT_DIR$/.idea/misc.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/misc.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/modules.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/modules.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/accounts/forms.py" beforeDir="false" afterPath="$PROJECT_DIR$/accounts/forms.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/accounts/templates/accounts/login.html" beforeDir="false" afterPath="$PROJECT_DIR$/accounts/templates/accounts/login.html" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/accounts/urls.py" beforeDir="false" afterPath="$PROJECT_DIR$/accounts/urls.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/food_project/asgi.py" beforeDir="false" afterPath="$PROJECT_DIR$/food_project/asgi.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/food_project/settings.py" beforeDir="false" afterPath="$PROJECT_DIR$/food_project/settings.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/food_project/urls.py" beforeDir="false" afterPath="$PROJECT_DIR$/food_project/urls.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/food_project/wsgi.py" beforeDir="false" afterPath="$PROJECT_DIR$/food_project/wsgi.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/manage.py" beforeDir="false" afterPath="$PROJECT_DIR$/manage.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/meals/templates/meals/admin_report.html" beforeDir="false" afterPath="$PROJECT_DIR$/meals/templates/meals/admin_report.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/meals/templates/meals/edit_meal.html" beforeDir="false" afterPath="$PROJECT_DIR$/meals/templates/meals/edit_meal.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/meals/templates/meals/select_meals.html" beforeDir="false" afterPath="$PROJECT_DIR$/meals/templates/meals/select_meals.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/meals/templates/meals/summary.html" beforeDir="false" afterPath="$PROJECT_DIR$/meals/templates/meals/summary.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/meals/templatetags/persian_filters.py" beforeDir="false" afterPath="$PROJECT_DIR$/meals/templatetags/persian_filters.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/meals/urls.py" beforeDir="false" afterPath="$PROJECT_DIR$/meals/urls.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/meals/views.py" beforeDir="false" afterPath="$PROJECT_DIR$/meals/views.py" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -42,6 +28,12 @@
   <component name="Git.Settings">
     <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
   </component>
+  <component name="GitHubPullRequestSearchHistory"><![CDATA[{
+  "lastFilter": {
+    "state": "OPEN",
+    "assignee": "pezhmanamiri"
+  }
+}]]></component>
   <component name="GithubPullRequestsUISettings"><![CDATA[{
   "selectedUrlAndAccountId": {
     "url": "https://github.com/pezhmanamiri/food_project.git",
@@ -117,7 +109,7 @@
       <updated>1752499654762</updated>
       <workItem from="1752499656876" duration="3399000" />
       <workItem from="1752503557169" duration="6336000" />
-      <workItem from="1752560153712" duration="1116000" />
+      <workItem from="1752560153712" duration="2605000" />
     </task>
     <servers />
   </component>

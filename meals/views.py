@@ -129,6 +129,9 @@ from collections import defaultdict
 from .models import EmployeeMealSelection
 from datetime import date, timedelta
 
+from django.contrib.admin.views.decorators import staff_member_required
+
+@staff_member_required
 def admin_report_view(request):
     today = date.today()
     days = [today + timedelta(days=i) for i in range(7)]
