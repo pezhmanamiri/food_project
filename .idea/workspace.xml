@@ -5,14 +5,13 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="96ab71ce-070a-4bfa-913b-1b0d71713514" name="Changes" comment="">
+      <change afterPath="$PROJECT_DIR$/static/js/sw.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/static/manifest.json" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/accounts/templates/accounts/login.html" beforeDir="false" afterPath="$PROJECT_DIR$/accounts/templates/accounts/login.html" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/db.sqlite3" beforeDir="false" afterPath="$PROJECT_DIR$/db.sqlite3" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/food_project/settings.py" beforeDir="false" afterPath="$PROJECT_DIR$/food_project/settings.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/meals/templates/meals/admin_report.html" beforeDir="false" afterPath="$PROJECT_DIR$/meals/templates/meals/admin_report.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/meals/templates/meals/edit_meal.html" beforeDir="false" afterPath="$PROJECT_DIR$/meals/templates/meals/edit_meal.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/meals/templates/meals/select_meals.html" beforeDir="false" afterPath="$PROJECT_DIR$/meals/templates/meals/select_meals.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/meals/templates/meals/summary.html" beforeDir="false" afterPath="$PROJECT_DIR$/meals/templates/meals/summary.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/meals/templatetags/persian_filters.py" beforeDir="false" afterPath="$PROJECT_DIR$/meals/templatetags/persian_filters.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/meals/views.py" beforeDir="false" afterPath="$PROJECT_DIR$/meals/views.py" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -33,18 +32,18 @@
   <component name="Git.Settings">
     <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
   </component>
-  <component name="GitHubPullRequestSearchHistory"><![CDATA[{
-  "lastFilter": {
-    "state": "OPEN",
-    "assignee": "pezhmanamiri"
+  <component name="GitHubPullRequestSearchHistory">{
+  &quot;lastFilter&quot;: {
+    &quot;state&quot;: &quot;OPEN&quot;,
+    &quot;assignee&quot;: &quot;pezhmanamiri&quot;
   }
-}]]></component>
-  <component name="GithubPullRequestsUISettings"><![CDATA[{
-  "selectedUrlAndAccountId": {
-    "url": "https://github.com/pezhmanamiri/food_project.git",
-    "accountId": "c8820acc-2467-4e6d-b1f1-d315851eddb6"
+}</component>
+  <component name="GithubPullRequestsUISettings">{
+  &quot;selectedUrlAndAccountId&quot;: {
+    &quot;url&quot;: &quot;https://github.com/pezhmanamiri/food_project.git&quot;,
+    &quot;accountId&quot;: &quot;c8820acc-2467-4e6d-b1f1-d315851eddb6&quot;
   }
-}]]></component>
+}</component>
   <component name="ProjectColorInfo">{
   &quot;associatedIndex&quot;: 1
 }</component>
@@ -54,23 +53,23 @@
     <option name="hideEmptyMiddlePackages" value="true" />
     <option name="showLibraryContents" value="true" />
   </component>
-  <component name="PropertiesComponent"><![CDATA[{
-  "keyToString": {
-    "DefaultHtmlFileTemplate": "HTML File",
-    "Django Server.djangoProject.executor": "Run",
-    "RunOnceActivity.OpenDjangoStructureViewOnStart": "true",
-    "RunOnceActivity.ShowReadmeOnStart": "true",
-    "git-widget-placeholder": "main",
-    "last_opened_file_path": "C:/Users/Pezhman/Desktop/food_project",
-    "node.js.detected.package.eslint": "true",
-    "node.js.detected.package.tslint": "true",
-    "node.js.selected.package.eslint": "(autodetect)",
-    "node.js.selected.package.tslint": "(autodetect)",
-    "nodejs_package_manager_path": "npm",
-    "settings.editor.selected.configurable": "vcs.Git",
-    "vue.rearranger.settings.migration": "true"
+  <component name="PropertiesComponent">{
+  &quot;keyToString&quot;: {
+    &quot;DefaultHtmlFileTemplate&quot;: &quot;HTML File&quot;,
+    &quot;Django Server.djangoProject.executor&quot;: &quot;Run&quot;,
+    &quot;RunOnceActivity.OpenDjangoStructureViewOnStart&quot;: &quot;true&quot;,
+    &quot;RunOnceActivity.ShowReadmeOnStart&quot;: &quot;true&quot;,
+    &quot;git-widget-placeholder&quot;: &quot;main&quot;,
+    &quot;last_opened_file_path&quot;: &quot;C:/Users/Pezhman/Desktop/food_project&quot;,
+    &quot;node.js.detected.package.eslint&quot;: &quot;true&quot;,
+    &quot;node.js.detected.package.tslint&quot;: &quot;true&quot;,
+    &quot;node.js.selected.package.eslint&quot;: &quot;(autodetect)&quot;,
+    &quot;node.js.selected.package.tslint&quot;: &quot;(autodetect)&quot;,
+    &quot;nodejs_package_manager_path&quot;: &quot;npm&quot;,
+    &quot;settings.editor.selected.configurable&quot;: &quot;vcs.Git&quot;,
+    &quot;vue.rearranger.settings.migration&quot;: &quot;true&quot;
   }
-}]]></component>
+}</component>
   <component name="RunManager">
     <configuration name="djangoProject" type="Python.DjangoServer" factoryName="Django server">
       <module name="food_project" />
@@ -115,7 +114,11 @@
       <updated>1752499654762</updated>
       <workItem from="1752499656876" duration="3399000" />
       <workItem from="1752503557169" duration="6336000" />
-      <workItem from="1752560153712" duration="13748000" />
+      <workItem from="1752560153712" duration="16481000" />
+      <workItem from="1752594902961" duration="5633000" />
+      <workItem from="1753020080858" duration="3091000" />
+      <workItem from="1753091211918" duration="6357000" />
+      <workItem from="1753106245084" duration="944000" />
     </task>
     <servers />
   </component>

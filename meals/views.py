@@ -13,7 +13,7 @@ def select_meals_view(request):
 
     employee = Employee.objects.get(id=employee_id)
     today = date.today()
-    days = [today + timedelta(days=i) for i in range(7)]  # امروز تا هفت روز بعد
+    days = [today + timedelta(days=i) for i in range(1, 8)]  # امروز تا هفت روز بعد
 
     if request.method == 'POST':
         for day in days:
@@ -35,7 +35,7 @@ def select_meals_view(request):
     meal_options = {}
 
     for d in days:
-        weekday = str((d.weekday() + 1) % 7)
+        weekday = str((d.weekday() + 2) % 7)
         meal_options[d] = {
             'breakfast': MealOption.objects.filter(day_of_week=weekday, meal_type='breakfast'),
             'lunch': MealOption.objects.filter(day_of_week=weekday, meal_type='lunch'),
@@ -62,7 +62,7 @@ def summary_view(request):
 
     employee = Employee.objects.get(id=employee_id)
     today = date.today()
-    days = [today + timedelta(days=i) for i in range(7)]
+    days = [today + timedelta(days=i) for i in range(1, 8)]
 
     selections = EmployeeMealSelection.objects.filter(employee=employee, date__in=days).order_by('date')
 
@@ -98,7 +98,7 @@ def edit_meal_view(request, meal_date):
 
     selection, created = EmployeeMealSelection.objects.get_or_create(employee=employee, date=target_date)
 
-    weekday = str((target_date.weekday() + 1) % 7)
+    weekday = str((target_date.weekday() + 2) % 7)
     meal_options = {
         'breakfast': MealOption.objects.filter(day_of_week=weekday, meal_type='breakfast'),
         'lunch': MealOption.objects.filter(day_of_week=weekday, meal_type='lunch'),
@@ -134,7 +134,7 @@ from django.contrib.admin.views.decorators import staff_member_required
 @staff_member_required
 def admin_report_view(request):
     today = date.today()
-    days = [today + timedelta(days=i) for i in range(7)]
+    days = [today + timedelta(days=i) for i in range(1, 8)]
 
     report_data = {}
 

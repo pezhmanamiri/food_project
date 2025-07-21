@@ -7,7 +7,7 @@ register = template.Library()
 def persian_weekday(date_obj):
     weekdays = ['دوشنبه', 'سه‌شنبه', 'چهارشنبه', 'پنج‌شنبه', 'جمعه', 'شنبه', 'یک‌شنبه']
     # تبدیل هفته میلادی (Mon=0) به شنبه=0
-    weekday_index = (date_obj.weekday() + 1) % 7
+    weekday_index = (date_obj.weekday() + 0) % 7
     return weekdays[weekday_index]
 
 @register.filter
